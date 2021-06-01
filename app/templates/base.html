@@ -1,0 +1,18 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - PG Manager</title>
+      {% else %}
+      <title>Welcome to PG Manager</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+			      PG Manager:
+			      <a href="{{ url_for('auth.index') }}">Home</a>
+			      <a href="{{ url_for('auth.login') }}">Login</a>
+		    </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
